@@ -1,0 +1,5 @@
+/Users/abelweldareguy/Downloads/P1_Base/P1_Base/bin/Release/P1_Base.exe.config
+/Users/abelweldareguy/Downloads/P1_Base/P1_Base/bin/Release/P1_Base.exe
+/Users/abelweldareguy/Downloads/P1_Base/P1_Base/bin/Release/P1_Base.pdb
+/Users/abelweldareguy/Downloads/P1_Base/P1_Base/obj/Release/P1_Base.exe
+/Users/abelweldareguy/Downloads/P1_Base/P1_Base/obj/Release/P1_Base.pdb
