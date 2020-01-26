@@ -66,6 +66,12 @@ namespace P1_Base
                 primeFactorA = calculatePrimeFactors(a);
                 primeFactorB = calculatePrimeFactors(b);
 
+                Console.WriteLine("The factors of " + a + " are: ");
+
+                Console.WriteLine(String.Join(" ", primeFactorA));
+
+                Console.WriteLine("The factors of " + b + " are: ");
+                Console.WriteLine(String.Join(" ", primeFactorB));
 
                 Console.WriteLine("\nDo you want to continue? Y/N");
                 string newLoop = Console.ReadLine();
@@ -81,7 +87,6 @@ namespace P1_Base
 
         public static List<int> calculatePrimeFactors(int num)
         {
-            // TODO
             List<int> primeFactors = new List<int>();
 
             for (int i = 2; i < num; i++)
@@ -91,12 +96,14 @@ namespace P1_Base
                     while (num % i == 0)
                     {
                         primeFactors.Add(i);
-                        num = num / 2;
+                        num = num / i;
                     }
                 }
             }
-
-
+            if (num != 1)
+            {
+                primeFactors.Add(num);
+            }
             return primeFactors;
         }
     }
