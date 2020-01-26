@@ -89,7 +89,7 @@ namespace P1_Base
         {
             List<int> primeFactors = new List<int>();
 
-            for (int i = 2; i < num; i++)
+            for (int i = 2; i <= Math.Sqrt(num); ++i)
             {
                 if (num % i == 0)
                 {
