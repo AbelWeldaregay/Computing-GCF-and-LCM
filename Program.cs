@@ -8,6 +8,12 @@ namespace P1_Base
 {
     class Program
     {
+
+        private static List<int> primeFactorA = new List<int>();
+        private static List<int> primeFactorB = new List<int>();
+        private int a;
+        private int b;
+
         static void Main(string[] args)
         {
             int a = -1, b = -1;
@@ -57,6 +63,8 @@ namespace P1_Base
                 }
 
                 // Enter your code here.
+                primeFactorA = calculatePrimeFactors(a);
+                primeFactorB = calculatePrimeFactors(b);
 
 
                 Console.WriteLine("\nDo you want to continue? Y/N");
@@ -69,6 +77,27 @@ namespace P1_Base
                 else
                     isContinue = false;
             }
+        }
+
+        public static List<int> calculatePrimeFactors(int num)
+        {
+            // TODO
+            List<int> primeFactors = new List<int>();
+
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    while (num % i == 0)
+                    {
+                        primeFactors.Add(i);
+                        num = num / 2;
+                    }
+                }
+            }
+
+
+            return primeFactors;
         }
     }
 }
