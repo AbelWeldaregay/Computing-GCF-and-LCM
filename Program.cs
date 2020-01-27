@@ -72,8 +72,8 @@ namespace P1_Base
 
                 Console.WriteLine("The factors of " + b + " are: ");
                 Console.WriteLine(String.Join(" ", primeFactorB));
-                Console.WriteLine("The GCF of " + a + " and " + b + " are: " + greatestCommonFactor(a, b));
-
+                Console.WriteLine("The GCF of " + a + " and " + b + " are: ");
+                Console.WriteLine(String.Join(" ", calculatePrimeFactors(greatestCommonFactor(a, b))));
                 Console.WriteLine("\nDo you want to continue? Y/N");
                 string newLoop = Console.ReadLine();
                 if (newLoop[0] == 'Y' || newLoop[0] == 'y')
