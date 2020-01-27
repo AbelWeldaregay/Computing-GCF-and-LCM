@@ -72,6 +72,7 @@ namespace P1_Base
 
                 Console.WriteLine("The factors of " + b + " are: ");
                 Console.WriteLine(String.Join(" ", primeFactorB));
+                Console.WriteLine("The GCF of " + a + " and " + b + " are: " + greatestCommonFactor(a, b));
 
                 Console.WriteLine("\nDo you want to continue? Y/N");
                 string newLoop = Console.ReadLine();
@@ -105,6 +106,21 @@ namespace P1_Base
                 primeFactors.Add(num);
             }
             return primeFactors;
+        }
+
+        public static int greatestCommonFactor(int a, int b)
+        {
+            int divisor = Math.Max(a, b);
+            int remainder = a % b;
+            int prev_remainder = remainder;
+
+            while (remainder != 0)
+            {
+                prev_remainder = remainder;
+                remainder = divisor % remainder;
+            }
+
+            return prev_remainder;
         }
     }
 }
