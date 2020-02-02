@@ -74,6 +74,9 @@ namespace P1_Base
                 Console.WriteLine(String.Join(" ", primeFactorB));
                 Console.WriteLine("The GCF of " + a + " and " + b + " are: ");
                 Console.WriteLine(String.Join(" ", calculatePrimeFactors(greatestCommonFactor(a, b))));
+                Console.WriteLine("The LCM of " + a + " and " + b + " are: ");
+                Console.WriteLine(leastCommonMultiple(a, b));
+
                 Console.WriteLine("\nDo you want to continue? Y/N");
                 string newLoop = Console.ReadLine();
                 if (newLoop[0] == 'Y' || newLoop[0] == 'y')
@@ -108,7 +111,16 @@ namespace P1_Base
             return primeFactors;
         }
 
-        public static int greatestCommonFactor(int a, int b)
+        public static int leastCommonMultiple(int a, int b) {
+
+            if (a == 0 || b == 0)
+                return 0;
+          
+            return Math.Abs(a*b) / greatestCommonFactor(a, b); 
+        }
+
+
+        public static int greatestCommonFactor(int a, int b) 
         {
             int divisor = Math.Max(a, b);
             int remainder = a % b;
