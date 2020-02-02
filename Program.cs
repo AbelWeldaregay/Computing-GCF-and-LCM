@@ -11,15 +11,11 @@ namespace P1_Base
 
         private static List<int> primeFactorA = new List<int>();
         private static List<int> primeFactorB = new List<int>();
-        private int a;
-        private int b;
 
         static void Main(string[] args)
         {
             int a = -1, b = -1;
             string sa, sb;
-            int[] primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 
-                           47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
 
             bool isContinue = true;
 
