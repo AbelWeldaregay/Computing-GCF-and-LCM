@@ -8,10 +8,17 @@ namespace P1_Base
 {
     class Program
     {
-
+        /**
+         * Holds the prime factors of the first number passed
+         */
         private static List<int> primeFactorA = new List<int>();
+        /**
+        * Holds the prime factores of the second number passed
+        */
         private static List<int> primeFactorB = new List<int>();
-
+        /**
+        * Driver method
+        */
         static void Main(string[] args)
         {
             int a = -1, b = -1;
@@ -84,7 +91,11 @@ namespace P1_Base
                     isContinue = false;
             }
         }
-
+        /**
+         * Calculates the prime factors of a given number
+         * @param num: the number to calculate the prime factors for
+         * @return a List<int> prime factors
+         */
         public static List<int> calculatePrimeFactors(int num)
         {
             List<int> primeFactors = new List<int>();
@@ -106,7 +117,12 @@ namespace P1_Base
             }
             return primeFactors;
         }
-
+        /**
+         * Calculates the least common multiples using |a*b|/GCF(a, b)
+         * @param a: the first number to be used in calculating LCM
+         * @param b: the second number to be used in calculating LCM
+         * @return true if all barks were successful.
+         */
         public static int leastCommonMultiple(int a, int b) {
 
             if (a == 0 || b == 0)
@@ -115,7 +131,12 @@ namespace P1_Base
             return Math.Abs(a*b) / greatestCommonFactor(a, b); 
         }
 
-
+        /**
+         * Calculates the greatest commn factor of two given numbers
+         * @param a: the first number to be used in calculating GCF
+         * @param b: the second number to be used in calculating GCF
+         * @return int: the greatest common factor
+         */
         public static int greatestCommonFactor(int a, int b) 
         {
             int divisor = Math.Max(a, b);
