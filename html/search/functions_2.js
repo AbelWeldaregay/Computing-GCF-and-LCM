@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leastcommonmultiple_10',['leastCommonMultiple',['../class_p1___base_1_1_program.html#acf1210cd8120e0abf52322495b03bf1d',1,'P1_Base::Program']]]
+  ['leastcommonmultiple_10',['LeastCommonMultiple',['../class_p1___base_1_1_program.html#a771ba62e167d841cc2bb0213e5daf1a9',1,'P1_Base::Program']]]
 ];

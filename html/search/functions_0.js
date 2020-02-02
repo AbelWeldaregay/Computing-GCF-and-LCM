@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['calculateprimefactors_8',['calculatePrimeFactors',['../class_p1___base_1_1_program.html#a48c05746083819f8b09d3962811c24d1',1,'P1_Base::Program']]]
+  ['calculateprimefactors_8',['CalculatePrimeFactors',['../class_p1___base_1_1_program.html#a2efc0cfb173d9412a525b1657335c150',1,'P1_Base::Program']]]
 ];

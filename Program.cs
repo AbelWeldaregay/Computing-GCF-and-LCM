@@ -65,9 +65,8 @@ namespace P1_Base
                         bValid = true;
                 }
 
-                // Enter your code here.
-                primeFactorA = calculatePrimeFactors(a);
-                primeFactorB = calculatePrimeFactors(b);
+                primeFactorA = CalculatePrimeFactors(a);
+                primeFactorB = CalculatePrimeFactors(b);
 
                 Console.WriteLine("The factors of " + a + " are: ");
 
@@ -76,9 +75,9 @@ namespace P1_Base
                 Console.WriteLine("The factors of " + b + " are: ");
                 Console.WriteLine(String.Join(" ", primeFactorB));
                 Console.WriteLine("The GCF of " + a + " and " + b + " are: ");
-                Console.WriteLine(String.Join(" ", calculatePrimeFactors(greatestCommonFactor(a, b))));
+                Console.WriteLine(String.Join(" ", CalculatePrimeFactors(GreatestCommonFactor(a, b))));
                 Console.WriteLine("The LCM of " + a + " and " + b + " are: ");
-                Console.WriteLine(leastCommonMultiple(a, b));
+                Console.WriteLine(LeastCommonMultiple(a, b));
 
                 Console.WriteLine("\nDo you want to continue? Y/N");
                 string newLoop = Console.ReadLine();
@@ -94,9 +93,9 @@ namespace P1_Base
         /**
          * Calculates the prime factors of a given number
          * @param num: the number to calculate the prime factors for
-         * @return a List<int> prime factors
+         * @return List<int>: prime factors
          */
-        public static List<int> calculatePrimeFactors(int num)
+        public static List<int> CalculatePrimeFactors(int num)
         {
             List<int> primeFactors = new List<int>();
 
@@ -121,9 +120,9 @@ namespace P1_Base
          * Calculates the least common multiples using |a*b|/GCF(a, b)
          * @param a: the first number to be used in calculating LCM
          * @param b: the second number to be used in calculating LCM
-         * @return true if all barks were successful.
+         * @return int: least common multiple
          */
-        public static int leastCommonMultiple(int a, int b) {
+        public static int LeastCommonMultiple(int a, int b) {
 
             if (a == 0 || b == 0)
                 return 0;
@@ -137,7 +136,7 @@ namespace P1_Base
          * @param b: the second number to be used in calculating GCF
          * @return int: the greatest common factor
          */
-        public static int greatestCommonFactor(int a, int b) 
+        public static int GreatestCommonFactor(int a, int b) 
         {
             int divisor = Math.Max(a, b);
             int remainder = a % b;
