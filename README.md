@@ -6,9 +6,9 @@ This program takes two numbers as command line arguments and computes the prime 
 - MonoGame
 
 ## Running
-Once you are in root directory of the project, execute the following command to build the project:
-`csc Program.cs`
-Following the above command, there should be a generated Program.exe executable. Use the following command to run the executable:
+Once you are in root directory of the project, execute the following command to build the project:<br>
+`csc Program.cs`<br>
+Following the above command, there should be a generated Program.exe executable. Use the following command to run the executable:<br>
 `mono Program.exe`
 ## Author(s)
 - Abel Weldaregay (abelweldaregay@gmail.com)
