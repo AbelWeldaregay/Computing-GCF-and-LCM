@@ -67,17 +67,8 @@ namespace P1_Base
 
                 primeFactorA = CalculatePrimeFactors(a);
                 primeFactorB = CalculatePrimeFactors(b);
-
-                Console.WriteLine("The factors of " + a + " are: ");
-
-                Console.WriteLine(String.Join(" ", primeFactorA));
-
-                Console.WriteLine("The factors of " + b + " are: ");
-                Console.WriteLine(String.Join(" ", primeFactorB));
-                Console.WriteLine("The GCF of " + a + " and " + b + " are: ");
-                Console.WriteLine(String.Join(" ", CalculatePrimeFactors(GreatestCommonFactor(a, b))));
-                Console.WriteLine("The LCM of " + a + " and " + b + " are: ");
-                Console.WriteLine(LeastCommonMultiple(a, b));
+                
+                PrintResults(a, b);
 
                 Console.WriteLine("\nDo you want to continue? Y/N");
                 string newLoop = Console.ReadLine();
@@ -90,6 +81,26 @@ namespace P1_Base
                     isContinue = false;
             }
         }
+        /**
+        * Prints the results calculated to the console
+        * @param a : the first number given
+        * @param b : the second number given
+        */
+        public static void PrintResults(int a, int b) {
+
+                Console.WriteLine("The factors of " + a + " are: ");
+                Console.WriteLine(String.Join(" ", primeFactorA));
+
+                Console.WriteLine("The factors of " + b + " are: ");
+                Console.WriteLine(String.Join(" ", primeFactorB));
+                
+                Console.WriteLine("The GCF of " + a + " and " + b + " are: ");
+                Console.WriteLine(String.Join(" ", CalculatePrimeFactors(GreatestCommonFactor(a, b))));
+                
+                Console.WriteLine("The LCM of " + a + " and " + b + " are: ");
+                Console.WriteLine(LeastCommonMultiple(a, b));
+        }
+
         /**
          * Calculates the prime factors of a given number
          * @param num: the number to calculate the prime factors for
@@ -127,7 +138,7 @@ namespace P1_Base
             if (a == 0 || b == 0)
                 return 0;
           
-            return Math.Abs(a*b) / greatestCommonFactor(a, b); 
+            return Math.Abs(a*b) / GreatestCommonFactor(a, b); 
         }
 
         /**
@@ -138,6 +149,9 @@ namespace P1_Base
          */
         public static int GreatestCommonFactor(int a, int b) 
         {
+            if (a == 1 || b == 1) {
+                return 1;
+            }
             int divisor = Math.Max(a, b);
             int remainder = a % b;
             int prev_remainder = remainder;
