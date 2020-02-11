@@ -10,5 +10,12 @@ Once you are in root directory of the project, execute the following command to 
 `csc Program.cs`<br>
 Following the above command, there should be a generated Program.exe executable. Use the following command to run the executable:<br>
 `mono Program.exe`
+
+## Output
+
+The output should look match the following:
+
+<img src="https://github.com/AbelWeldaregay/Computing-GCF-and-LCM/blob/master/doc/output_screenshot.png?raw=true">
+
 ## Author(s)
 - Abel Weldaregay (abelweldaregay@gmail.com)
