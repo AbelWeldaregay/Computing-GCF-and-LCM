@@ -95,7 +95,7 @@ namespace P1_Base
                 Console.WriteLine(String.Join(" ", primeFactorB));
                 
                 Console.WriteLine("The GCF of " + a + " and " + b + " are: ");
-                Console.WriteLine(String.Join(" ", CalculatePrimeFactors(GreatestCommonFactor(a, b))));
+                Console.WriteLine(String.Join(" ", GreatestCommonFactor(a, b)));
                 
                 Console.WriteLine("The LCM of " + a + " and " + b + " are: ");
                 Console.WriteLine(LeastCommonMultiple(a, b));
@@ -137,8 +137,13 @@ namespace P1_Base
 
             if (a == 0 || b == 0)
                 return 0;
-          
-            return Math.Abs(a*b) / GreatestCommonFactor(a, b); 
+            int gcf = GreatestCommonFactor(a, b);
+            if (gcf != 0)
+            {
+                return Math.Abs(a*b) / gcf;
+            } else {
+                return Math.Max(a, b);
+            } 
         }
 
         /**
@@ -149,9 +154,12 @@ namespace P1_Base
          */
         public static int GreatestCommonFactor(int a, int b) 
         {
-            if (a == 1 || b == 1) {
-                return 1;
+            int max = Math.Max(a, b);
+            int min = Math.Min(a, b);
+            if (max % min == 0) {
+                return min;
             }
+
             int divisor = Math.Max(a, b);
             int remainder = a % b;
             int prev_remainder = remainder;
